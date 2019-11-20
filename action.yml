@@ -1,0 +1,21 @@
+name: Drupal Check with Reviewdog
+author: Reload A/S <info@reload.dk>
+description: Run Drupal Check and add results to your PR using Reviewdog
+inputs:
+  paths:
+    description: Paths to run drupal-check on
+    required: false
+    default: "'web/modules/custom' 'web/modules/themes'"
+  reporter:
+    description: Reviewdog reporter
+    required: false
+    default: github-pr-check
+env:
+  GITHUB_TOKEN: GitHub API token as provided by Github Actions
+  REVIEWDOG_TOKEN: Reviewdog token (optional)
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: check-circle
+  color: purple
