@@ -4,8 +4,7 @@ description: Run Drupal Check and add results to your PR using Reviewdog
 inputs:
   paths:
     description: Paths to run drupal-check on
-    required: false
-    default: "'web/modules/custom' 'web/modules/themes'"
+    required: true
   reporter:
     description: Reviewdog reporter
     required: false
@@ -15,7 +14,7 @@ env:
   REVIEWDOG_TOKEN: Reviewdog token (optional)
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://reload/drupal-check-reviewdog-action:latest'
 branding:
   icon: check-circle
   color: purple
