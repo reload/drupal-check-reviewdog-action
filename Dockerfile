@@ -1,4 +1,4 @@
-FROM reviewdog/action-golangci-lint:v1.0.5 AS reviewdog
+FROM reviewdog/action-golangci-lint:v1.1.1 AS reviewdog
 
 RUN cp "$(go env GOPATH)/bin/reviewdog" /usr/bin/reviewdog
 
