@@ -2,7 +2,7 @@ FROM reviewdog/action-golangci-lint:v1.1.1 AS reviewdog
 
 RUN cp "$(go env GOPATH)/bin/reviewdog" /usr/bin/reviewdog
 
-FROM php:7.3.11-cli-stretch
+FROM php:7.3.12-cli-stretch
 
 WORKDIR /github/workspace
 
