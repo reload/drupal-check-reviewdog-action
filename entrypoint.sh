@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -veuo pipefail
 
 step_log () {
     echo -e "\033[1m$*...\033[0m"
