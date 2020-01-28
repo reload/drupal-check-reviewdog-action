@@ -5,6 +5,9 @@ inputs:
   paths:
     description: Paths to run drupal-check on
     required: true
+  check:
+    description: Check `analysis` or `deprecations`
+    required: true
   reporter:
     description: Reviewdog reporter
     required: false

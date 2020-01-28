@@ -20,13 +20,22 @@ jobs:
     - name: Install composer dependencies
       run: |
         composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-    - name: Check and report
+    - name: Deprecations check and report
       uses: reload/drupal-check-reviewdog-action@master
       with:
+        check: deprecations
+        paths: |-
+          web/modules
+          web/themes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Anlysis check and report
+      uses: reload/drupal-check-reviewdog-action@master
+      with:
+        check: analysis
         paths: |-
           web/modules/custom
           web/themes/custom
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 ```
