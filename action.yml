@@ -9,6 +9,10 @@ inputs:
     description: Reviewdog reporter
     required: false
     default: github-pr-check
+  workdir:
+    description: Change to workdir before running (if composer.json is not located in git root)
+    required: false
+    default: .
 env:
   GITHUB_TOKEN: GitHub API token as provided by Github Actions
   REVIEWDOG_TOKEN: Reviewdog token (optional)

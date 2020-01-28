@@ -2,6 +2,8 @@
 
 set -veu
 
+cd "$INPUT_WORKDIR"
+
 step_log () {
     echo -e "\033[1m$*...\033[0m"
 }
