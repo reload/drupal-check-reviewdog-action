@@ -19,7 +19,7 @@ jobs:
         coverage: none
     - name: Install composer dependencies
       run: |-
-        composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+        composer install --no-interaction --no-progress
     - name: Deprecations check and report
       uses: reload/drupal-check-reviewdog-action@master
       with:
