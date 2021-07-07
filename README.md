@@ -4,7 +4,7 @@ This action is locked to `drupal-check` version 1.0.14.
 
 The reason is the action uses the `phar` file distribution of `drupal-check` and 1.0.14 is the last version supporting, usable `phar` files.
 
-Instead, I suggest installing `phpstan` and `drupal-check` as part of your project (`composer require --dev mglaman/phpstan-drupal phpstan/extension-installer phpstan/phpstan-deprecation-rules`) and calling `phpstan` directly in an action:
+Instead, I suggest installing `phpstan` and `phpstan-drupal` as part of your project (`composer require --dev mglaman/phpstan-drupal phpstan/extension-installer phpstan/phpstan-deprecation-rules`) and calling `phpstan` directly in an action:
 
 ```yaml
 on: pull_request
